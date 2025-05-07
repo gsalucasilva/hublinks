@@ -37,10 +37,10 @@ body * {
 }
 
 #container {
-  width: 412px;
+  max-width: 412px;
+  width: 100%;
   padding: 0 24px;
   margin: 20px auto 0;
-  max-width: 588px;
 }
 
 /*Switch*/
@@ -137,11 +137,13 @@ body * {
 
 
 /* EStilizar Social Links */
+
 #social-links {
   display: flex;
   padding: 20px 0 0 0;
   gap: 10px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 #social-links a {
   display: flex;
@@ -228,6 +230,36 @@ footer a:hover {
   }
   .light {
     --bg-url: url(./assets/img/bg-desktop-light.png)
+  }
+}
+
+/* Telas menores */
+@media (max-width: 360px) {
+  #profile img {
+    width: 100px;
+  }
+
+  ul li a {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  #small-text {
+    right: 12px;
+    font-size: 9px;
+  }
+
+  #switch {
+    width: 56px;
+  }
+
+  #switch span {
+    width: 56px;
+  }
+
+  #switch button {
+    width: 28px;
+    height: 28px;
   }
 }
 

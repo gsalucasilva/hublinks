@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/img/bg-mobile.png);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+  --small-text-color: green;
+  --transition: all 0.3s ease;
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/img/bg-mobile-light.png);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/Sun2.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  transition: background 0.3s ease;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 412px;
+  padding: 0 24px;
+  margin: 20px auto 0;
+  max-width: 588px;
+}
+
+/*Switch*/
+/*Foi adicionado um container para colocar o button acima do avatar*/
+#switch-container{ 
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 30px;
+}
+  
+#switch{
+  position: absolute; /* Move o switch para final do container na horizontal*/
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  animation: slide-back 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+.light #switch button {
+  animation: slide-in 0.3s forwards;
+  
+}
+
+#switch span {
+  width: 64px;
+  height: 24px;
+  display: block;
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+}
+
+
+/*Profile*/
+#profile {
+  text-align: center;
+  padding: 40px 24px 0 24px;
+}
+
+#profile img {
+  width: 120px;
+  border-radius: 100%;
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+/* Adicionei hover para transição na imagem*/
+#profile img:hover {
+  border: 3px solid var(--stroke-color);
+  border-color: var(--stroke-color);
+  transform: scale(1.1);
+}
+
+#profile h1 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#profile p {
+  font-weight: 100;
+  font-size: 9px;
+  margin-top: 8px;
+}
+
+/*Profile Bio*/
+#profile-bio h1{
+  font-weight: 900;
+  margin-top: 15px;
+}
+
+#profile-bio p{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+/* EStilizar Social Links */
+#social-links {
+  display: flex;
+  padding: 20px 0 0 0;
+  gap: 10px;
+  justify-content: center;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 10px;
+  background: var(--highlight-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: relative;
+}
+#social-links a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+  transform: translateY(-3px);
+}
+
+/*Links*/
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--highlight-color);
+  border: 1px  var(--stroke-color);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Pseudoselector */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+  transform: translateY(-3px);
+  
+}
+/* Adicionei transição nos links e um Link Badge*/
+#small-text{
+  background-color: var(--small-text-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+}
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+   color:#d105cb;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*Contador de visitantes*/
+#visitor-counter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 8px;
+   gap: 4px;
+}
+/* Media Query */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/img/bg-desktop.png)
+  }
+  .light {
+    --bg-url: url(./assets/img/bg-desktop-light.png)
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Lucas silva" />
+    <meta name="description" content="Modelo hub de links para bio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <title>HUBlinks</title>
+</head>
+<body class="light">
+  <div id="container">
+    <div id="switch-container">
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+    </div>
+    <div id="profile">
+      <img src="assets/img/light.png" alt="Foto-Perfil" />
+      <div id="profile-bio">
+        <h1>Dev FullStack Jr.</h1>
+          <p>Transformando ideias em soluções digitais</p>
+      </div>
+  </div>
+
+  <div id="social-links">
+    <a href="https://github.com/gsalucasilva" target="_blank">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+    <a href="https://linkedin.com/in/gsalucasilva" target="_blank">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+    <a href="https://instagram.com/gsalucasilva" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a href="https://wa.me/+5599991023866" target="_blank">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
+  </div>
+      <ul>
+        <li>
+          <a href="#" target="_blank">DevBlog <span id="small-text">Breve</span></a>
+        </li>
+        <li>
+          <a href="https://github.com/gsalucasilva" target="_blank">Portfólio <span id="small-text">Breve</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">Download CV <span id="small-text">Breve</span>
+            
+          </a>
+        </li>
+        <li>
+          <a href="https://rocketseat.com.br" target="_blank"
+            >Conheça o Explorer</a
+            >
+        </li>
+      </ul>
+    </div>
+    <footer
+      title="Desenvolvido por Lucas Silva 2025 - Todos os direitos reservados Rockeseat "
+      >
+      &copy; Lucas Silva 2025 -
+      <a
+      href="https://app.rocketseat.com.br/cart/formacao-fullstack?referral=gsalucasilva&coupon=indicamgm&utm_source=platform&utm_medium=organic&utm_campaign=venda&utm_term=mgm&utm_content=indication-lp_one"
+        ><strong>Rocketseat</strong></a
+      >
+      <div id="visitor-counter"><ion-icon id="icon-eye" name="eye"></ion-icon><span id="counter">0</span> visitantes
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+      <script src="script.js"></script>
+      <script>updateVisitorCounter();</script>
+    </body> 
+</html>
